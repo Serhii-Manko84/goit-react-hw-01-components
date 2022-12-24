@@ -1,7 +1,6 @@
-import css from './SocialLink.module.css';
 import propTypes from 'prop-types';
-
-console.log(css);
+import css from './SocialLink.module.css';
+import user from '../../assets/data/user.json';
 
 export const SocialLink = () => {
   return (
@@ -9,15 +8,15 @@ export const SocialLink = () => {
       <ul className={css.stats}>
         <li className={css.statsItem}>
           <span className={css.label}>Followers</span>
-          <span className={css.quantity}>1000</span>
+          <span className={css.quantity}>{user.stats.followers}</span>
         </li>
         <li className={css.statsItem}>
           <span className={css.label}>Views</span>
-          <span className={css.quantity}>2000</span>
+          <span className={css.quantity}>{user.stats.views}</span>
         </li>
         <li className={css.statsItem}>
           <span className={css.label}>Likes</span>
-          <span className={css.quantity}>3000</span>
+          <span className={css.quantity}>{user.stats.likes}</span>
         </li>
       </ul>
     </>
@@ -26,6 +25,6 @@ export const SocialLink = () => {
 
 SocialLink.propTypes = {
   Followers: propTypes.number.isRequired,
-  Views: propTypes.number,
-  Likes: propTypes.number,
+  Views: propTypes.number.isRequired,
+  Likes: propTypes.number.isRequired,
 };
