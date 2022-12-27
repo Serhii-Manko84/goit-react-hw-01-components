@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
-import { makeRandomHexColor } from 'utils/colorFunction';
+import { makeRandomHexColor } from 'helpers/colorFunction';
 
 export const Statistics = ({ title, stats }) => {
   return (
